@@ -111,7 +111,7 @@ ul {
 .page-section {
   position: relative;
   padding: clamp(36px, 5vw, 60px) 0;
-  background: var(--bg);
+  background: #ffffff;
 }
 
 .page-section.white-bg {
@@ -370,6 +370,7 @@ ul {
   padding-top: clamp(24px, 4vw, 34px);
   padding-bottom: clamp(48px, 7vw, 84px);
   overflow: hidden;
+  background: #ffffff;
 }
 
 .home-main-title {
@@ -387,11 +388,19 @@ ul {
   margin-bottom: clamp(32px, 5vw, 58px);
 }
 
+.home-welcome-section,
+.home-focus-section,
+.home-main-title
+.home-welcome-grid {
+  background: #ffffff;
+}
+
 .home-copy-col,
 .home-image-col,
 .home-focus-copy-col,
 .home-focus-image-col {
   min-width: 0;
+  background: #ffffff;
 }
 
 .home-body-text {
@@ -639,7 +648,7 @@ ul {
 /* ── Leadership ── */
 .leadership-chess-section {
   width: 100%;
-  background: var(--bg);
+  background: #ffffff;
 }
 
 .leadership-chess-image {
@@ -651,6 +660,7 @@ ul {
   padding-top: clamp(40px, 5vw, 56px);
   padding-bottom: clamp(48px, 6vw, 78px);
   position: relative;
+  background: #ffffff;
 }
 
 .leadership-main-title {
@@ -718,6 +728,7 @@ ul {
 }
 
 /* ── Collaborations ── */
+/* ── Collaborations ── */
 .collab-page-section {
   position: relative;
   background: #ffffff;
@@ -744,13 +755,34 @@ ul {
 .collab-brand-row {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  align-items: center;
+  align-items: stretch;
   gap: clamp(18px, 3vw, 28px);
   margin-bottom: 34px;
 }
 
-.collab-logo-box-large {
-  min-height: 166px;
+.collab-brand-row > :first-child {
+  justify-self: end;
+}
+
+.collab-brand-row > :nth-child(2) {
+  justify-self: center;
+  align-self: center;
+}
+
+.collab-brand-row > :last-child {
+  justify-self: start;
+}
+
+.collab-logo-box {
+  will-change: transform;
+}
+
+.collab-logo-box-large,
+.collab-logo-box-equal {
+  width: 100%;
+  max-width: 420px;
+  min-height: 190px;
+  height: 100%;
   background: #ffffff;
   border: 1px solid #d7dbe5;
   border-radius: 28px;
@@ -758,6 +790,12 @@ ul {
   align-items: center;
   justify-content: center;
   padding: 24px 28px;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.collab-logo-box-large:hover,
+.collab-logo-box-equal:hover {
+  box-shadow: 0 18px 40px rgba(12, 28, 61, 0.12);
 }
 
 .collab-logo-inner-bg {
@@ -766,13 +804,15 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  min-height: 124px;
+  height: 100%;
 }
 
 .collab-logo-image {
+  max-height: 86px;
   width: auto;
-  height: auto;
   max-width: 100%;
-  max-height: 90px;
   object-fit: contain;
 }
 
@@ -780,12 +820,16 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: min(300px, 100%);
-  flex-shrink: 0;
+  width: 220px;
+  justify-self: center;
+  align-self: center;
+  will-change: transform;
 }
 
 .collab-handshake-image {
-  max-width: 100%;
+  display: block;
+  width: 100%;
+  max-width: 220px;
   height: auto;
 }
 
@@ -809,14 +853,29 @@ ul {
 
 .collab-cards-grid-new {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
   gap: clamp(18px, 3vw, 30px);
 }
 
+.collab-card-reveal {
+  height: 100%;
+}
+
 .collab-card-new {
+  height: 100%;
   background: #dce6f5;
   padding: clamp(24px, 3vw, 34px) clamp(18px, 2.5vw, 28px) 28px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+  will-change: transform;
+}
+
+.collab-card-new:hover {
+  box-shadow: 0 18px 40px rgba(12, 28, 61, 0.12);
 }
 
 .collab-card-title {
@@ -826,6 +885,18 @@ ul {
   font-weight: 700;
   line-height: 1.35;
   margin-bottom: 18px;
+  min-height: 68px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+}
+
+.collab-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex: 1;
 }
 
 .collab-card-text {
@@ -833,10 +904,7 @@ ul {
   font-size: clamp(16px, 1.8vw, 18px);
   line-height: 1.75;
   color: #222222;
-}
-
-.collab-card-text + .collab-card-text {
-  margin-top: 18px;
+  margin: 0;
 }
 
 .collab-map-wrap {
@@ -845,6 +913,12 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  will-change: transform;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.collab-map-wrap:hover {
+  box-shadow: 0 18px 40px rgba(12, 28, 61, 0.12);
 }
 
 .collab-map-image {
@@ -893,6 +967,44 @@ ul {
   height: 210px;
   background-image: radial-gradient(circle, #d3d6dc 2.5px, transparent 2.5px);
   background-size: 26px 26px;
+}
+
+@media (max-width: 1100px) {
+  .collab-brand-row {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .collab-brand-row > :first-child,
+  .collab-brand-row > :nth-child(2),
+  .collab-brand-row > :last-child {
+    justify-self: center;
+  }
+
+  .collab-handshake-wrap {
+    width: min(240px, 70vw);
+  }
+
+  .collab-logo-box-large,
+  .collab-logo-box-equal {
+    width: 100%;
+    max-width: 560px;
+    min-height: 180px;
+  }
+
+  .collab-cards-grid-new {
+    grid-template-columns: 1fr;
+  }
+
+  .collab-card-reveal,
+  .collab-card-new {
+    height: auto;
+  }
+
+  .collab-card-title {
+    min-height: 0;
+  }
 }
 
 /* ── Products / generic product area ── */
@@ -1319,3 +1431,13 @@ footer {
   display: block;
   background: #000;
 }
+
+.home-feature-card {
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+  will-change: transform;
+}
+
+.home-feature-card:hover {
+  box-shadow: 0 18px 40px rgba(12, 28, 61, 0.12);
+}
+
