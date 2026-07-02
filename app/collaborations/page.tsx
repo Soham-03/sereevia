@@ -5,7 +5,6 @@ import { motion, useReducedMotion, type Variants } from 'motion/react';
 
 export default function CollaborationsPage() {
   const reduceMotion = useReducedMotion();
-   
 
   const fadeUp: Variants = {
     hidden: { opacity: 0, y: 40 },
@@ -187,10 +186,9 @@ export default function CollaborationsPage() {
                 This collaboration strengthens Sereevia&apos;s capabilities in
               </h3>
 
-                <div className="collab-card-body">
-                  <p className="collab-card-text">
-                    Access to pharmaceutical-grade amino acids and bioactive actives
-                  </p>
+              <p className="collab-card-text">
+                Access to pharmaceutical-grade amino acids and bioactive actives
+              </p>
 
               <p className="collab-card-text">
                 Integration of European research and quality standards into product development
@@ -208,10 +206,9 @@ export default function CollaborationsPage() {
             >
               <h3 className="collab-card-title">Development</h3>
 
-                <div className="collab-card-body">
-                  <p className="collab-card-text">
-                    Development of next-generation dermatology and nutraceutical formulations
-                  </p>
+              <p className="collab-card-text">
+                Development of next-generation dermatology and nutraceutical formulations
+              </p>
 
               <p className="collab-card-text">
                 Enhancing clinical credibility and global innovation alignment
@@ -232,7 +229,7 @@ export default function CollaborationsPage() {
             markets.
           </motion.p>
 
-          {/* <motion.h2
+          <motion.h2
             className="collab-sub-title"
             initial={reduceMotion ? false : 'hidden'}
             whileInView={reduceMotion ? undefined : 'visible'}
@@ -240,7 +237,7 @@ export default function CollaborationsPage() {
             variants={textLine}
           >
             OUR GLOBAL FOOT PRINT
-          </motion.h2> */}
+          </motion.h2>
 
           <motion.div
             className="collab-map-wrap"
