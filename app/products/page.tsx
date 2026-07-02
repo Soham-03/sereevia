@@ -1,11 +1,4 @@
 'use client';
-<<<<<<< HEAD
-
-import Footer from '@/components/footer-band';
-import { motion, useReducedMotion } from 'motion/react';
-import type { ReactNode } from 'react';
-
-=======
 
 import Footer from '@/components/footer-band';
 import Link from 'next/link';
@@ -14,7 +7,6 @@ import { motion, useReducedMotion } from 'motion/react';
 import type { ReactNode } from 'react';
 import { getAllProducts, Product } from '@/lib/products';
 
->>>>>>> ccf6c79 (-products firebase connected)
 const tabs = [
   'ALL BRANDS',
   'CLEANSING',
@@ -22,18 +14,6 @@ const tabs = [
   'TRICHOLOGY',
   'ANTI-AGING',
   'PREMIUM PORTFOLIO',
-<<<<<<< HEAD
-];
-
-const products = [
-  { name: 'GloONE Tab', label: 'PROVIDE PRODUCT IMAGE — GloONE Tab packaging' },
-  { name: 'GloONE-C Tab', label: 'PROVIDE PRODUCT IMAGE — GloONE-C Tab packaging' },
-  { name: 'GloONE inj Tab', label: 'PROVIDE PRODUCT IMAGE — GloONE inj Tab packaging' },
-  { name: 'GloONE Tab', label: 'PROVIDE PRODUCT IMAGE — GloONE Tab packaging' },
-  { name: 'GloONE-C Tab', label: 'PROVIDE PRODUCT IMAGE — GloONE-C Tab packaging' },
-  { name: 'GloONE inj Tab', label: 'PROVIDE PRODUCT IMAGE — GloONE inj Tab packaging' },
-=======
->>>>>>> ccf6c79 (-products firebase connected)
 ];
 
 type RevealProps = {
@@ -44,45 +24,16 @@ type RevealProps = {
   hover?: boolean;
 };
 
-<<<<<<< HEAD
-function Reveal({
-  children,
-  delay = 0,
-  y = 28,
-  className,
-  hover = false,
-}: RevealProps) {
-  const reduceMotion = useReducedMotion();
-
-=======
 function Reveal({ children, delay = 0, y = 28, className, hover = false }: RevealProps) {
   const reduceMotion = useReducedMotion();
->>>>>>> ccf6c79 (-products firebase connected)
   return (
     <motion.div
       className={className}
       initial={reduceMotion ? false : { opacity: 0, y }}
       whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
-<<<<<<< HEAD
-      whileHover={
-        hover && !reduceMotion
-          ? {
-              y: -6,
-              scale: 1.01,
-              transition: { duration: 0.18, ease: [0.16, 1, 0.3, 1] },
-            }
-          : undefined
-      }
-      transition={{
-        duration: 0.7,
-        delay,
-        ease: [0.16, 1, 0.3, 1],
-      }}
-=======
       whileHover={hover && !reduceMotion ? { y: -6, scale: 1.01 } : undefined}
       transition={{ duration: 0.7, delay, ease: [0.16, 1, 0.3, 1] }}
->>>>>>> ccf6c79 (-products firebase connected)
     >
       {children}
     </motion.div>
@@ -125,18 +76,11 @@ export default function ProductsPage() {
 
           <Reveal delay={0.14}>
             <div className="filter-tabs">
-<<<<<<< HEAD
-              {tabs.map((t, i) => (
-                <motion.button
-                  key={t}
-                  className={`filter-tab${i === 0 ? ' active' : ''}`}
-=======
               {tabs.map((t) => (
                 <motion.button
                   key={t}
                   className={`filter-tab${t === activeTab ? ' active' : ''}`}
                   onClick={() => setActiveTab(t)}
->>>>>>> ccf6c79 (-products firebase connected)
                   whileHover={{ y: -2, scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
@@ -147,21 +91,6 @@ export default function ProductsPage() {
             </div>
           </Reveal>
 
-<<<<<<< HEAD
-          <div className="products-grid">
-            {products.map((p, i) => (
-              <Reveal key={`${p.name}-${i}`} delay={0.08 + i * 0.05} hover className="prod-card">
-                <div className="prod-thumb">{p.label}</div>
-                <div className="prod-label">
-                  <span>{p.name}</span>
-                  <div className="stars">
-                    <span />
-                    <span />
-                    <span />
-                    <span />
-                  </div>
-                </div>
-=======
           {loading && <p className="prod-loading">Loading products…</p>}
 
           {!loading && filtered.length === 0 && (
@@ -185,7 +114,6 @@ export default function ProductsPage() {
                     </div>
                   </div>
                 </Link>
->>>>>>> ccf6c79 (-products firebase connected)
               </Reveal>
             ))}
           </div>
