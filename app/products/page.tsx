@@ -67,7 +67,7 @@ export default function ProductsPage() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <p className="sec-subline">
+            <p className="sec-subline text-center">
               Using the best-in-class ingredients and state-of-art manufacturing facilities, we
               have developed our innovative product portfolio to address the needs of the
               healthcare professionals and the patient&apos;s skin care needs.

@@ -24,19 +24,13 @@ export default function Navbar() {
   return (
     <nav className="site-nav">
       <div className="wrap nav-inner">
-        <Link href="/" className="nav-logo">
-          <svg className="nav-logo-icon" viewBox="0 0 34 34" fill="none">
-            <rect x="2" y="2" width="30" height="30" rx="4" stroke="#0b3d78" strokeWidth="2" />
-            <path
-              d="M8 17 L14 11 L20 17 L26 11"
-              stroke="#0b3d78"
-              strokeWidth="2.2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-          <span className="nav-logo-text">Sereevia</span>
-        </Link>
+        <Link href="/" className="nav-logo" aria-label="Sereevia home">
+  <img
+    src="/images/sereevia-logo.png"
+    alt="Sereevia"
+    className="nav-logo-image"
+  />
+</Link>
 
         <button
           type="button"

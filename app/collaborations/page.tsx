@@ -229,7 +229,7 @@ export default function CollaborationsPage() {
             markets.
           </motion.p>
 
-          <motion.h2
+          {/* <motion.h2
             className="collab-sub-title"
             initial={reduceMotion ? false : 'hidden'}
             whileInView={reduceMotion ? undefined : 'visible'}
@@ -237,7 +237,7 @@ export default function CollaborationsPage() {
             variants={textLine}
           >
             OUR GLOBAL FOOT PRINT
-          </motion.h2>
+          </motion.h2> */}
 
           <motion.div
             className="collab-map-wrap"

@@ -1,6 +1,6 @@
 'use client';
 
-import Footer from '@/components/footer';
+import Footer from '@/components/footer-band';
 import { motion, useReducedMotion, type Variants } from 'motion/react';
 
 export default function LeadershipPage() {

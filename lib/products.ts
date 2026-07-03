@@ -9,10 +9,16 @@ export type Product = {
   ingredients: string;
   packSize: string;
   image: string;
+  imagePublicId?: string;
+  imageResourceType?: string;
   image2?: string;
+  image2PublicId?: string;
   image3?: string;
+  image3PublicId?: string;
   image4?: string;
+  image4PublicId?: string;
   image5?: string;
+  image5PublicId?: string;
 };
 
 export async function getAllProducts(): Promise<Product[]> {
