@@ -7,6 +7,9 @@ import IntroVideo from '@/components/intro-video';
 export const metadata: Metadata = {
   title: 'Sereevia Biomed Pvt. Ltd.',
   description: 'Science-led dermatology and biomed innovation company',
+  icons: {
+    icon: '/images/sereevia-website-icon.png',
+  },
 };
 
 export default function RootLayout({

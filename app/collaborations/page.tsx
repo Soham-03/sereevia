@@ -120,7 +120,7 @@ export default function CollaborationsPage() {
             >
               <div className="collab-logo-inner-bg">
                 <img
-                  src="/images/sereevia.png"
+                  src="/images/123.svg"
                   alt="Sereevia Biomed logo"
                   className="collab-logo-image"
                 />
@@ -146,7 +146,7 @@ export default function CollaborationsPage() {
             >
               <div className="collab-logo-inner-bg">
                 <img
-                  src="/images/bcf.png"
+                  src="/images/12345.svg"
                   alt="BCF Life Sciences logo"
                   className="collab-logo-image"
                 />

@@ -166,26 +166,31 @@ export default function HomePage() {
             variants={cardsContainer}
           >
             <motion.div
-              className="home-feature-card home-feature-card-accent"
+              className="home-feature-card"
               variants={cardItem}
               whileHover={
                 reduceMotion ? undefined : { y: -10, scale: 1.02, transition: { duration: 0.3 } }
               }
             >
-              <motion.div className="home-feature-icon" variants={iconSpin}>
-                <svg viewBox="0 0 64 64" fill="none">
-                  <circle cx="32" cy="32" r="22" strokeWidth="2.2" />
-                  <circle cx="32" cy="32" r="12" strokeWidth="2.2" />
-                  <circle cx="32" cy="32" r="4.5" fill="#0b3d78" stroke="none" />
-                  <path d="M35 29L50 14" strokeWidth="2.4" strokeLinecap="round" />
-                  <path
-                    d="M45 14H51V20"
-                    strokeWidth="2.4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
+              {/* <motion.div className="home-feature-icon" variants={iconSpin}>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="home-feature-icon-svg"
+                  aria-hidden="true"
+                >
+                  <circle cx="11" cy="11" r="9.5" />
+                  <circle cx="11" cy="11" r="6" />
+                  <circle cx="11" cy="11" r="2.4" />
+                  <path d="M11 11 L18.5 3.5" />
+                  <path d="M18.5 3.5 L20.5 1.5 L21 5.5 L23 6 L21 8 L17 8.5" />
                 </svg>
-              </motion.div>
+              </motion.div> */}
+              <motion.div className="home-feature-icon home-feature-icon-mask home-feature-icon-vision" variants={iconSpin} />
               <h3 className="home-feature-title">OUR VISION</h3>
               <p className="home-feature-text">
                 To emerge as a globally Respected dermatology-Driven innovation company, Setting
@@ -206,15 +211,16 @@ export default function HomePage() {
                 reduceMotion ? undefined : { y: -10, scale: 1.02, transition: { duration: 0.3 } }
               }
             >
-              <motion.div className="home-feature-icon" variants={iconSpin}>
+              {/* <motion.div className="home-feature-icon" variants={iconSpin}>
                 <svg viewBox="0 0 64 64" fill="none">
                   <path
                     d="M32 10L38 20L50 21L41 30L44 42L32 35L20 42L23 30L14 21L26 20L32 10Z"
-                    strokeWidth="2.2"
+                    strokeWidth="3.8"
                     strokeLinejoin="round"
                   />
                 </svg>
-              </motion.div>
+              </motion.div> */}
+              <motion.div className="home-feature-icon home-feature-icon-mask home-feature-icon-mission" variants={iconSpin} />
               <h3 className="home-feature-title">OUR MISSION</h3>
               <p className="home-feature-text">
                 To develop and deliver science-backed, clinically relevant, and aesthetically
@@ -235,26 +241,26 @@ export default function HomePage() {
                 reduceMotion ? undefined : { y: -10, scale: 1.02, transition: { duration: 0.3 } }
               }
             >
-              <motion.div className="home-feature-icon" variants={iconSpin}>
-                <svg viewBox="0 0 64 64" fill="none">
-                  <path
-                    d="M18 33L26 41L33 34L39 40L48 31"
-                    strokeWidth="2.4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M15 29C20 24 25 22 30 24C33 25 35 27 38 29C42 31 46 31 50 28"
-                    strokeWidth="2.2"
-                    strokeLinecap="round"
-                  />
-                  <path d="M17 45H47" strokeWidth="2.2" strokeLinecap="round" />
+              {/* <motion.div className="home-feature-icon" variants={iconSpin}>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="home-feature-icon-svg"
+                  aria-hidden="true"
+                >
+                  <path d="M22 7.99995H20M20 7.99995H19C17 6.00173 14 3.99974 12 5.99995M20 7.99995V15.9999M12 5.99995L8.99956 9.00158C8.9202 9.08097 8.88052 9.12066 8.84859 9.1558C8.15499 9.91889 8.15528 11.0842 8.84927 11.847C8.88121 11.8821 8.92098 11.9218 9.00031 12.0011C9.07967 12.0804 9.11936 12.1201 9.15449 12.152C9.91743 12.8453 11.0824 12.8452 11.8451 12.1516C11.8802 12.1197 11.9199 12.08 11.9992 12.0007L12.9996 11.0003M12 5.99995C10 3.99974 7 6.0018 5 8.00001H4M2 8.00001H4M4 8.00001V15.9999M20 15.9999V18.9999H22M20 15.9999H17.1716M15 12.9999L16.5 14.4999C16.5796 14.5796 16.6195 14.6194 16.6515 14.6547C17.3449 15.4175 17.3449 16.5824 16.6515 17.3452C16.6195 17.3805 16.5796 17.4203 16.5 17.4999C16.4204 17.5795 16.3805 17.6194 16.3453 17.6515C15.5824 18.3449 14.4176 18.3449 13.6547 17.6515C13.6195 17.6194 13.5796 17.5795 13.5 17.4999L13 16.9999C12.4548 17.5452 12.1821 17.8178 11.888 17.9636C11.3285 18.2408 10.6715 18.2408 10.112 17.9636C9.81788 17.8178 9.54525 17.5452 9 16.9999C8.31085 17.9188 6.89563 17.7912 6.38197 16.7639L6 15.9999H4M4 15.9999V18.9999H2" />
                 </svg>
-              </motion.div>
+              </motion.div> */}
+              <motion.div className="home-feature-icon home-feature-icon-mask home-feature-icon-promise" variants={iconSpin} />
               <h3 className="home-feature-title">OUR PROMISE</h3>
               <p className="home-feature-text">
                 Sereevia Biomed is not just building products - it is building a new standard in
-                dermatology - driven care, where Science Delivers Results, Design Creates Desire,
+                dermatology - driven care, where Scie
+                nce Delivers Results, Design Creates Desire,
                 Innovation Drives.
               </p>
               <motion.span

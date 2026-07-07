@@ -26,7 +26,7 @@ export default function FooterBand() {
             <a href="mailto:info@sereeviabiomed.com" className="footer-link">
               info@sereeviabiomed.com
             </a>
-            <a href="tel:+911234567890" className="footer-link">+91 12345 67890</a>
+            <a href="tel:02246666097" className="footer-link"> 022-4666 6097</a>
             <p className="footer-address">
               Sereevia Biomed Pvt. Ltd.<br />
               India
