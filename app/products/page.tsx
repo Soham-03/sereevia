@@ -55,26 +55,26 @@ export default function ProductsPage() {
     activeTab === 'ALL BRANDS'
       ? products
       : products.filter(
-          (p) => p.category?.toUpperCase() === activeTab
-        );
+        (p) => p.category?.toUpperCase() === activeTab
+      );
 
   return (
     <main>
       <section className="page-section">
         <div className="wrap">
-          <Reveal delay={0.05}>
-            <h2 className="sec-heading">PRODUCT PORTFOLIO</h2>
+          <Reveal delay={0.05} className="products-heading-block">
+            <h2 className="sec-heading products-sec-heading">PRODUCT PORTFOLIO</h2>
           </Reveal>
 
-          <Reveal delay={0.1}>
-            <p className="sec-subline text-center">
+          <Reveal delay={0.1} className="products-subline-block">
+            <p className="sec-subline products-sec-subline text-center">
               Using the best-in-class ingredients and state-of-art manufacturing facilities, we
               have developed our innovative product portfolio to address the needs of the
               healthcare professionals and the patient&apos;s skin care needs.
             </p>
           </Reveal>
 
-          <Reveal delay={0.14}>
+          <Reveal delay={0.14} className="products-tabs-block">
             <div className="filter-tabs">
               {tabs.map((t) => (
                 <motion.button

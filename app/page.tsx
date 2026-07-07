@@ -119,9 +119,9 @@ export default function HomePage() {
             WELCOME TO SEREEVIA BIOMED PVT. LTD.
           </motion.h2>
 
-          <div className="home-welcome-grid">
+          <div className="home-welcome-grid home-welcome-grid-centered">
             <motion.div
-              className="home-copy-col"
+              className="home-copy-col home-copy-col-centered"
               initial={reduceMotion ? false : 'hidden'}
               whileInView={reduceMotion ? undefined : 'visible'}
               viewport={{ once: true, amount: 0.3 }}
@@ -143,7 +143,7 @@ export default function HomePage() {
             </motion.div>
 
             <motion.div
-              className="home-image-col"
+              className="home-image-col home-image-col-centered"
               initial={reduceMotion ? false : 'hidden'}
               whileInView={reduceMotion ? undefined : 'visible'}
               viewport={{ once: true, amount: 0.3 }}
@@ -153,7 +153,7 @@ export default function HomePage() {
               <img
                 src="/images/home1.png"
                 alt="Sereevia skin innovation"
-                className="home-welcome-image"
+                className="home-welcome-image-centered"
               />
             </motion.div>
           </div>

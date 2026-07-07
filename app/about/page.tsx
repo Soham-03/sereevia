@@ -105,24 +105,24 @@ export default function AboutPage() {
         <div className="dots about-editorial-dots-right" />
 
         <div className="about-page-inner">
-          <motion.h2
-            className="about-editorial-title about-editorial-title-wide"
-            initial={reduceMotion ? false : 'hidden'}
-            whileInView={reduceMotion ? undefined : 'visible'}
-            viewport={{ once: true, amount: 0.4 }}
-            variants={titleReveal}
-          >
-            MANUFACTURING &amp; QUALITY COMMITMENT
-          </motion.h2>
-
           <div className="about-editorial-grid about-editorial-grid-left">
             <motion.div
-              className="about-editorial-copy"
+              className="about-editorial-copy about-editorial-copy-topfix"
               initial={reduceMotion ? false : 'hidden'}
               whileInView={reduceMotion ? undefined : 'visible'}
               viewport={{ once: true, amount: 0.25 }}
               variants={slideLeft}
             >
+              <motion.h2
+                className="about-editorial-title about-editorial-title-wide"
+                initial={reduceMotion ? false : 'hidden'}
+                whileInView={reduceMotion ? undefined : 'visible'}
+                viewport={{ once: true, amount: 0.4 }}
+                variants={titleReveal}
+              >
+                MANUFACTURING &amp; QUALITY COMMITMENT
+              </motion.h2>
+
               <motion.p
                 className="about-editorial-intro"
                 initial={reduceMotion ? false : { opacity: 0 }}
@@ -190,9 +190,9 @@ export default function AboutPage() {
         <div className="dots about-editorial-dots-left-bottom" />
 
         <div className="about-page-inner">
-          <div className="about-editorial-grid about-editorial-grid-right">
+          <div className="about-editorial-grid about-editorial-grid-right about-editorial-grid-right-custom">
             <motion.div
-              className="about-editorial-image-wrap about-editorial-image-wrap-left"
+              className="about-editorial-image-wrap-innovation"
               initial={reduceMotion ? false : 'hidden'}
               whileInView={reduceMotion ? undefined : 'visible'}
               viewport={{ once: true, amount: 0.25 }}
@@ -206,19 +206,19 @@ export default function AboutPage() {
               <img
                 src="/images/about4.png"
                 alt="Innovation philosophy"
-                className="about-editorial-image"
+                className="about-editorial-image-innovation"
               />
             </motion.div>
 
             <motion.div
-              className="about-editorial-copy"
+              className="about-editorial-copy about-editorial-copy-innovation"
               initial={reduceMotion ? false : 'hidden'}
               whileInView={reduceMotion ? undefined : 'visible'}
               viewport={{ once: true, amount: 0.25 }}
               variants={slideRight}
             >
               <motion.h2
-                className="about-editorial-title"
+                className="about-editorial-title about-editorial-title-innovation"
                 initial={reduceMotion ? false : { opacity: 0, y: 20 }}
                 whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.4 }}

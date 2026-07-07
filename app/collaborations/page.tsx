@@ -129,7 +129,7 @@ export default function CollaborationsPage() {
 
             <motion.div className="collab-handshake-wrap" variants={handshakePop}>
               <motion.img
-                src="/images/image.png"
+                src="/images/1234.svg"
                 alt="Scientific collaboration handshake"
                 className="collab-handshake-image"
                 whileHover={reduceMotion ? undefined : { scale: 1.06, rotate: 1 }}
@@ -224,7 +224,7 @@ export default function CollaborationsPage() {
             variants={fadeUp}
           >
             Through this partnership, Sereevia is building a global innovation network, combining
-            international scientific expertise with localized dermatological insights — enabling
+            international scientific expertise with localized dermatological insights - enabling
             the creation of differentiated, high-performance solution for both Indian and global
             markets.
           </motion.p>
