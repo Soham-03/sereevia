@@ -114,6 +114,24 @@ export default function ProductDetailPage() {
         </div>
       </section>
 
+       <motion.section
+        className="page-section product-usage-section"
+        initial={reduceMotion ? false : { opacity: 0, y: 20 }}
+        whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.15 }}
+        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+      >
+        <div className="wrap">
+          <div className="product-usage-image-wrap">
+            <img
+              src="/images/product-usage-glass.png"
+              alt="How to use the product"
+              className="product-usage-image"
+            />
+          </div>
+        </div>
+      </motion.section>
+
       <Footer />
     </main>
   );

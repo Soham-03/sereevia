@@ -1997,3 +1997,22 @@ footer {
 .home-feature-card:hover .home-feature-icon-mask {
   background-color: #ffffff;
 }
+
+.product-usage-section {
+  padding-top: clamp(8px, 2vw, 20px);
+  padding-bottom: clamp(48px, 6vw, 72px);
+  background: #ffffff;
+}
+
+.product-usage-image-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.product-usage-image {
+  display: block;
+  width: 100%;
+  max-width: 1800px;
+  height: auto;
+}
