@@ -1833,10 +1833,11 @@ footer {
 }
 
 .product-detail-title {
+  font-family: 'Poppins';
   font-size: clamp(32px, 4vw, 42px);
   line-height: 1.15;
   color: #0b3d78;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 28px;
 }
 
