@@ -16,6 +16,33 @@ const tabs = [
   'PREMIUM PORTFOLIO',
 ];
 
+const productOrder = [
+  'GloONE',
+  'GloOne-C',
+  'GloOne-Inj',
+  'GloOne-TX',
+  'Ellviie facewash',
+  'Ellviie bodywash',
+  'Ellviie shampoo',
+  'Ellviie soaps',
+  'Celvia-Tab',
+  'Celvia moisturizer',
+  'Keranixe-Tab',
+  'Keranixe-R',
+  'Serevil Tablet',
+  'Folixea Tablet',
+  'Astavia Tablet',
+  'Itrivex-100 Capsule',
+  'Ellyte-c 1000',
+  'Selyon Silicon Sunscreen',
+  'Selyon Smart Sunscreen',
+  'Skenox-N10 Serum',
+];
+
+const productOrderMap = new Map(
+  productOrder.map((name, index) => [name.toLowerCase(), index])
+);
+
 type RevealProps = {
   children: ReactNode;
   delay?: number;
@@ -26,6 +53,7 @@ type RevealProps = {
 
 function Reveal({ children, delay = 0, y = 28, className, hover = false }: RevealProps) {
   const reduceMotion = useReducedMotion();
+
   return (
     <motion.div
       className={className}
@@ -51,12 +79,16 @@ export default function ProductsPage() {
       .finally(() => setLoading(false));
   }, []);
 
-  const filtered =
+  const filteredBase =
     activeTab === 'ALL BRANDS'
       ? products
-      : products.filter(
-        (p) => p.category?.toUpperCase() === activeTab
-      );
+      : products.filter((p) => p.category?.toUpperCase() === activeTab);
+
+  const filtered = [...filteredBase].sort((a, b) => {
+    const aIndex = productOrderMap.get(a.name.toLowerCase()) ?? Number.MAX_SAFE_INTEGER;
+    const bIndex = productOrderMap.get(b.name.toLowerCase()) ?? Number.MAX_SAFE_INTEGER;
+    return aIndex - bIndex;
+  });
 
   return (
     <main>

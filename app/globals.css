@@ -1223,7 +1223,7 @@ ul {
 }
 
 .prod-thumb {
-  height: 280px;
+  height: 100%;
   background: #2a6db5;
   position: relative;
   overflow: hidden;
@@ -1238,7 +1238,7 @@ ul {
 }
 
 .prod-label {
-  font-family: var(--font-heading);
+  font-family: 'Poppins';
   background: var(--navy);
   color: #ffffff;
   font-size: 15px;

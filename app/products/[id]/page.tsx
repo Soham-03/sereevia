@@ -102,9 +102,9 @@ export default function ProductDetailPage() {
                 <strong>Description</strong> - {product.description}
               </p>
 
-              <p className="product-detail-meta">
+              {/* <p className="product-detail-meta">
                 <strong>Ingredients</strong> - {product.ingredients}
-              </p>
+              </p> */}
 
               <p className="product-detail-meta">
                 <strong>Pack Size</strong> - {product.packSize}
@@ -114,7 +114,7 @@ export default function ProductDetailPage() {
         </div>
       </section>
 
-       <motion.section
+      <motion.section
         className="page-section product-usage-section"
         initial={reduceMotion ? false : { opacity: 0, y: 20 }}
         whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
